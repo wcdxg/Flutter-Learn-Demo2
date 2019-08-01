@@ -53,7 +53,7 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
               ),
               title: Text(
                 'Page',
-                style: TextStyle(color: _BottomNavigationColor),
+                style: TextStyle(color: _bottomNavigationColor),
               )),
         ],
         currentIndex: _currentIndex,
