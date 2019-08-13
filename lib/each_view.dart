@@ -14,7 +14,10 @@ class _EachViewState extends State<EachView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget._title),
+        title: Text(
+          widget._title,
+          style: TextStyle(color: Colors.white),
+        ),
       ),
       body: Center(
         child: Text(widget._title),
