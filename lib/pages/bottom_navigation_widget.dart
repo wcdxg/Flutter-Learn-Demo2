@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
-import 'pages/email.dart';
-import 'pages/home.dart';
-import 'pages/shopping.dart';
+import 'email.dart';
+import 'home.dart';
+import 'shopping.dart';
 
 void main() => runApp(BottomNavigationWidget());
 

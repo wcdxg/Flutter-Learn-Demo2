@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'bottom_navigation_widget.dart';
+import 'package:flutterlearn2/pages/bottom_navigation_widget.dart';
 
 void main() => runApp(MyApp());
 

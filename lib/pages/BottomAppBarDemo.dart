@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'each_view.dart';
+import 'package:flutterlearn2/pages/each_view.dart';
 
 //void main() => runApp(BottomAppBarDemo());
 

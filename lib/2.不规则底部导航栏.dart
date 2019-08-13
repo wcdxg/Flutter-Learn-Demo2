@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterlearn2/BottomAppBarDemo.dart';
+import 'package:flutterlearn2/pages/BottomAppBarDemo.dart';
 
 main() => runApp(MyApp());
 

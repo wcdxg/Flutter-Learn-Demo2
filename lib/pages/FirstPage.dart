@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterlearn2/custom_router.dart';
+import 'package:flutterlearn2/pages/custom_router.dart';
 
 class FirstPage extends StatelessWidget {
   @override
