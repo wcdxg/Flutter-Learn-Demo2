@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutterlearn2/BottomAppBarDemo.dart';
 
-void main() => runApp(MyApp());
+main() => runApp(MyApp());
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      title: '不规则导航栏',
+      theme: ThemeData(primaryColor: Colors.lightBlue),
+      home: BottomAppBarDemo(),
+    );
   }
 }
