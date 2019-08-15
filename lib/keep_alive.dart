@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterlearn2/pages/keep_alive_demo.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,6 +23,8 @@ class KeepAliveDemo extends StatefulWidget {
 
 class _KeepAliveDemoState extends State<KeepAliveDemo>
     with SingleTickerProviderStateMixin {
+  //SingleTickerProviderStateMixin  实现 Tab 的动画切换效果
+
   TabController _tabController;
 
   @override
@@ -48,9 +51,9 @@ class _KeepAliveDemoState extends State<KeepAliveDemo>
         ]),
       ),
       body: TabBarView(controller: _tabController, children: <Widget>[
-        Text('1111111'),
-        Text('2222222'),
-        Text('3333333'),
+        MyHomePage(),
+        MyHomePage(),
+        MyHomePage(),
       ]),
     );
   }
