@@ -1,6 +1,6 @@
 // This is a generated file; do not edit or check into version control.
 FLUTTER_ROOT=D:\FlutterSDK\flutter
-FLUTTER_APPLICATION_PATH=E:\ASDemo\FlutterLearn2\flutterlearn2
+FLUTTER_APPLICATION_PATH=E:\ASDemo\FlutterDemo2
 FLUTTER_TARGET=lib\main.dart
 FLUTTER_BUILD_DIR=build
 SYMROOT=${SOURCE_ROOT}/../build\ios

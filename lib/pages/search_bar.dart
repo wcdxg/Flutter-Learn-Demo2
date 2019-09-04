@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterlearn2/pages/asset.dart';
 
 class SearchBarDemo extends StatefulWidget {
   @override
@@ -15,7 +16,7 @@ class _SearchBarDemoState extends State<SearchBarDemo> {
           IconButton(
             icon: Icon(Icons.search),
             onPressed: () {
-              print("点击了搜索");
+              showSearch(context: context, delegate: searchBarDelegate());
             },
           )
         ],
@@ -24,31 +25,55 @@ class _SearchBarDemoState extends State<SearchBarDemo> {
   }
 }
 
-
-class searchBarDelegate extends SearchDelegate{
+class searchBarDelegate extends SearchDelegate {
   @override
   List<Widget> buildActions(BuildContext context) {
-    // TODO: implement buildActions
-    return null;
+    return [
+      IconButton(icon: Icon(Icons.clear), onPressed: () => {query = ""})
+    ];
   }
 
   @override
   Widget buildLeading(BuildContext context) {
-    // TODO: implement buildLeading
-    return null;
+    return IconButton(
+        icon: AnimatedIcon(
+          icon: AnimatedIcons.menu_arrow,
+          progress: transitionAnimation,
+        ),
+        onPressed: () => close(context, null));
   }
 
   @override
   Widget buildResults(BuildContext context) {
-    // TODO: implement buildResults
-    return null;
+    return Container(
+      width: 100,
+      height: 100,
+      child: Card(
+          color: Colors.blueAccent,
+          child: Center(
+            child: Text(query),
+          )),
+    );
   }
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    // TODO: implement buildSuggestions
-    return null;
+    final suggestionList = query.isEmpty
+        ? recentSuggest
+        : searchList.where((input) => input.startsWith(query)).toList();
+    return ListView.builder(
+        itemCount: suggestionList.length,
+        itemBuilder: (context, index) => ListTile(
+              title: RichText(
+                  text: TextSpan(
+                      text: suggestionList[index].substring(0, query.length),
+                      style: TextStyle(
+                          color: Colors.black, fontWeight: FontWeight.bold),
+                      children: [
+                    TextSpan(
+                        text: suggestionList[index].substring(query.length),
+                        style: TextStyle(color: Colors.grey))
+                  ])),
+            ));
   }
-
 }
-
